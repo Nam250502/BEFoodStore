@@ -3,6 +3,7 @@ package com.hutech.BEFoodStore.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -11,6 +12,7 @@ public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
+    private Date date;
     private  double total;
 
     @OneToMany(mappedBy = "bill")
